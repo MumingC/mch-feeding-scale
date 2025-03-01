@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+h1, h2, h3 {
+    color: #2c3e50;
+}
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.info-item {
+    flex: 1;
+    margin-right: 10px;
+}
+.info-item input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.instructions {
+    background: #f8f9fa;
+    padding: 10px;
+    border-left: 4px solid #2c3e50;
+    margin-bottom: 20px;
+}
+.question {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+}
+.radio-option {
+    text-align: center;
+    flex: 1;
+}
+.radio-option input {
+    margin: 0 auto 5px;
+    display: block;
+}
+.radio-label {
+    font-size: 12px;
+    display: block;
+}
+.scoring-section {
+    margin-top: 30px;
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+}
+.btn {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.btn:hover {
+    background: #1a252f;
+}
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #2c3e50;
+}
