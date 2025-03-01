@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCH-餵食量表電子問卷</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MCH-餵食量表</h1>
+            <h2>麥吉爾大學醫療中心 - 蒙特利爾兒童醫院 - 兒科餵食計劃</h2>
+            <p><strong>（適用於6個月至6歲兒童）</strong></p>
+        </header>
+
+        <div class="info-section">
+            <div class="info-item">
+                <label for="child-name">兒童姓名：</label>
+                <input type="text" id="child-name" name="child-name">
+            </div>
+            <div class="info-item">
+                <label for="screening-date">日期：</label>
+                <input type="date" id="screening-date" name="screening-date">
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p><strong>請為每個問題圈選相應的數字。請注意，數字的含義各不相同 - 它們並非都朝相同方向。請仔細閱讀每個問題。謝謝。</strong></p>
+        </div>
+
+        <form id="feeding-form">
+            <!-- 問題1 -->
+            <div class="question">
+                <p><strong>1. 您如何看待與孩子的用餐時間？</strong></p>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="q1" value="1" id="q1-1">
+                        <label for="q1-1">1</label>
+                        <span class="radio-label">非常困難</span>
+                    </div>
+                    <!-- 選項2-6 -->
+                    <div class="radio-option">
+                        <input type="radio" name="q1" value="2" id="q1-2">
+                        <label for="q1-2">2</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q1" value="3" id="q1-3">
+                        <label for="q1-3">3</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q1" value="4" id="q1-4">
+                        <label for="q1-4">4</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q1" value="5" id="q1-5">
+                        <label for="q1-5">5</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q1" value="6" id="q1-6">
+                        <label for="q1-6">6</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q1" value="7" id="q1-7">
+                        <label for="q1-7">7</label>
+                        <span class="radio-label">輕鬆</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 請複製此模板為問題2-14 -->
+            <!-- 問題2 -->
+            <div class="question">
+                <p><strong>2. 您對孩子的飲食狀況有多擔憂？</strong></p>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="q2" value="1" id="q2-1">
+                        <label for="q2-1">1</label>
+                        <span class="radio-label">不擔憂</span>
+                    </div>
+                    <!-- 選項2-6 -->
+                    <div class="radio-option">
+                        <input type="radio" name="q2" value="2" id="q2-2">
+                        <label for="q2-2">2</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q2" value="3" id="q2-3">
+                        <label for="q2-3">3</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q2" value="4" id="q2-4">
+                        <label for="q2-4">4</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q2" value="5" id="q2-5">
+                        <label for="q2-5">5</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q2" value="6" id="q2-6">
+                        <label for="q2-6">6</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="q2" value="7" id="q2-7">
+                        <label for="q2-7">7</label>
+                        <span class="radio-label">非常擔憂</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 重複此結構直到問題14 -->
+
+            <div class="scoring-section">
+                <h3>計算分數</h3>
+                <button type="button" id="calculate-btn" class="btn">計算分數</button>
+            </div>
+
+            <div id="results" class="results" style="display:none;">
+                <h3>計分結果</h3>
+                <p>總原始分數: <span id="raw-score">0</span></p>
+                <p>T分數: <span id="t-score">0</span></p>
+                <p>解釋: <span id="interpretation"></span></p>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
